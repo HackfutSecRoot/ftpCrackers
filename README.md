@@ -18,6 +18,15 @@
   <a href="https://t.me/LinxProdXs404"><img src="https://img.shields.io/badge/Telegram-Channel_2-red?style=for-the-badge&logo=telegram"></a>
 </p>
 
+<p align="center">
+  <a href="https://postimg.cc/QMB9NSKy">
+    <img src="https://i.postimg.cc/QMB9NSKy/Screenshot-2026-11-20-5.png" 
+         alt="GHOST FTP CRACKER - Launch Menu" 
+         width="100%" 
+         style="border-radius: 12px; box-shadow: 0 0 25px rgba(255,100,0,0.6);">
+  </a>
+</p>
+
 ---
 
 ## 📖 Overview
@@ -32,7 +41,7 @@
 
 | Feature | Description |
 |---------|-------------|
-| 🎯 **9 Input Formats** | Supports `host:user:pass`, `url|user|pass`, `Host:... User:...`, and more |
+| 🎯 **9 Input Formats** | Supports `host:user:pass`, `url\|user\|pass`, `Host:... User:...`, and more |
 | 🤖 **AUTO Mode** | Automatically detects & parses **all formats** in the same file |
 | ⚡ **Fast Checker** | Multi-threaded engine (up to 50 workers) for blazing-fast testing |
 | 🔔 **Telegram Alerts** | Instant notifications for successful logins on secure domains |
@@ -40,6 +49,65 @@
 | 📁 **File Permission Grabbing** | Lists files & permissions on successful FTP login |
 | 📝 **Dual Output** | Saves results to `Good_Ftp.txt` and `Bad_Ftp.txt` |
 | 🎨 **Colorful CLI** | Rich terminal output with progress tracking |
+
+---
+
+## 🖥️ Launch Menu Preview
+
+<p align="center">
+  <img src="https://i.postimg.cc/QMB9NSKy/Screenshot-2026-11-20-5.png" alt="GHOST FTP CRACKER - Launch Menu" width="850">
+</p>
+
+<p align="center">
+  <i>⚡ Interactive CLI with colored banner, format selection & fast-mode toggle ⚡</i>
+</p>
+
+### 📸 What You See
+
+When you launch **GHOST FTP CRACKER**, you are greeted with a rich, colored terminal interface:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  🔥 GHOST - FTP CRACKER LOGIN                           │
+│     @CODE BY HackFut                                    │
+│  ─────────────────────────────────────────────────────  │
+│  #Contact : t.me/HackfutS3c                             │
+│  #Github  : https://github.com/HackfutSecRoot           │
+│  #License : MIT                                         │
+│  [Warning] I am not responsible for the way you use it  │
+└─────────────────────────────────────────────────────────┘
+
+[] Choose the format of the input file:
+
+  1. host:user:password
+  2. host:user:password:port
+  3. host - user;password - port
+  4. ftp://hostname;user;pass
+  5. Host: ... User: ... Password: ...
+  6. url|username|password
+  7. host:port:username:password
+  8. host:port,user,password
+  9. AUTO (detect and parse ALL formats in the same file)
+
+[] Enter your choice (1-9): _
+```
+
+### 🎛️ Interactive Prompts
+
+| Prompt | Purpose |
+|--------|---------|
+| `[] Enter The List :` | Path to your credentials file |
+| `[] Enable Fast Checker mode? (y/n) :` | Toggle 50-worker multi-threading |
+| `[] Enter The Password File (leave empty to skip) :` | Optional wordlist for brute-force fallback |
+
+### 🎨 Visual Highlights
+
+- 🟥🟨 **Red-to-Yellow gradient** banner (ASCII ghost + credits)
+- 🟦🟩 **Blue-to-Green gradient** description block
+- 🟨 **Yellow** interactive prompts `[]` markers
+- 🟩 **Green** success messages (FAST OK / Successfully logged in)
+- 🟥 **Red** failure messages (Failed login)
+- 🕐 **Timestamped** log lines: `[HH:MM:SS] - [host] - [user] - [pass] - [STATUS]`
 
 ---
 
@@ -91,6 +159,28 @@ python ftp_cracker.py
 4. *(If normal mode)* Provide an **optional password wordlist** for brute-forcing
 5. **Watch results** in real-time with colored output
 
+### 🎬 Quick Demo Flow
+
+```bash
+$ python ftp_cracker.py
+```
+
+**Step 1** → Menu appears (see screenshot above)
+**Step 2** → Select format `9` (AUTO)
+**Step 3** → Enter `creds.txt`
+**Step 4** → Enable Fast Mode → `y`
+**Step 5** → Watch live colored results:
+
+```
+[1/247] [14:32:11] - [ftp.example.com] - [admin] - [pass123] - [FAST OK]
+
+[2/247] [14:32:12] - [ftp.secure.gov]  - [root]  - [toor]    - [FAST OK]  🔔 Telegram Alert sent!
+```
+
+**Step 6** → Results saved:
+- ✅ `Good_Ftp.txt` → `247` valid credentials
+- ❌ `Bad_Ftp.txt` → `0` failed
+
 ---
 
 ## 📋 Supported Formats
@@ -118,7 +208,7 @@ python ftp_cracker.py
          │
          ▼
 ┌──────────────────┐
-│  Parse Credentials│  ← 9 formats + AUTO detection
+│ Parse Credentials│  ← 9 formats + AUTO detection
 └────────┬─────────┘
          │
          ▼
